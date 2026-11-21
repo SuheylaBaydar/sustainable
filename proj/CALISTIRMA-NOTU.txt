@@ -1,0 +1,30 @@
+PROJE DURUMU
+
+- PostgreSQL bağlantısı aktif edildi.
+- Kullanıcı kayıt/giriş işlemleri PostgreSQL üzerinden çalışır.
+- Varsayılan admin hesabı ilk çalıştırmada otomatik oluşur:
+  Kullanıcı adı: admin
+  Şifre: admin123
+- Admin paneli: /admin
+- Admin panelinde kullanıcı, ürün, mesaj ve randevu kayıtları görüntülenir.
+- Admin panelinde kullanıcı ve ürün ekleme/silme işlemleri çalışır.
+- /urunler sayfası artık localStorage yerine /api/products üzerinden PostgreSQL veritabanını kullanır.
+- Anasayfadaki mesaj formu /api/messages üzerinden kaydeder.
+- İletişim sayfasındaki randevu formu /api/appointments üzerinden kaydeder.
+
+KURULUM
+
+1) PostgreSQL'de sustainable isimli veritabanı oluşturun.
+2) .env.local dosyasında DATABASE_URL satırını kendi PostgreSQL kullanıcı adınıza ve şifrenize göre düzenleyin.
+   Örnek:
+   DATABASE_URL=postgresql://postgres:postgres@localhost:5432/sustainable
+3) Paketleri kurun:
+   npm install
+4) Projeyi çalıştırın:
+   npm run dev
+5) Tarayıcıdan açın:
+   http://localhost:3000
+
+NOT
+
+Next.js build sırasında internet erişimi olmayan ortamda Google Fonts indirmesi hata verdiği için layout.tsx içindeki harici Google font kullanımı kaldırıldı ve sistem fontu kullanıldı.

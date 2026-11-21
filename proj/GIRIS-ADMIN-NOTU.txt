@@ -1,0 +1,32 @@
+GIRIS VE ADMIN PANELI
+
+1) Proje klasoru:
+   cd sustainable-enso-postgresql-admin-fixed\proj
+
+2) Paket kurulumu:
+   npm install
+
+3) PostgreSQL baglantisi:
+   .env.local dosyasindaki DATABASE_URL satirini kendi PostgreSQL bilgilerinizle ayni yapin.
+   Varsayilan:
+   DATABASE_URL=postgresql://postgres:postgres@localhost:5432/sustainable
+
+4) Uygulamayi calistirma:
+   npm run dev
+
+5) Site:
+   http://localhost:3000
+
+6) Admin paneli:
+   http://localhost:3000/admin
+
+7) Varsayilan admin girisi:
+   Kullanici adi: admin
+   Sifre: admin123
+
+8) Normal kullanici:
+   Kayıt Ol ekranından oluşturulur. Girişte kullanıcı adı alanına e-posta yazılabilir.
+
+Notlar:
+- Google/GitHub sosyal giriş kaldırıldı; ayar olmadığı için hata üretmesin diye güvenli kullanıcı adı/e-posta + şifre girişi aktif edildi.
+- Uygulama ilk veritabanı sorgusunda users, products, messages ve appointments tablolarını otomatik oluşturur.
